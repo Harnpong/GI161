@@ -13,16 +13,39 @@ public class GameManager : MonoBehaviour
         set { playerScore = value;  }
     }
 
+    [SerializeField] private GameObject ballPrefab;
+
+    [SerializeField] 
+    private GameObject[] ballPositions;
+
+    public static GameManager instance;
+
     [SerializeField] private int score = 0;
     void Start()
     {
-        var instance = this;
+        instance = this;
         
+        SetBall(BallColor.Red,1);
+        SetBall(BallColor.Yellow,2);
+        SetBall(BallColor.Green,3);
+        SetBall(BallColor.Brown,4);
+        SetBall(BallColor.Blue,5);
+        SetBall(BallColor.Pink,6);
+        SetBall(BallColor.Black,7);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void SetBall(BallColor col, int i)
+    {
+        GameObject obj = Instantiate(ballPrefab, ballPositions[i].transform.position, Quaternion.identity);
+
+        Ball b = obj.GetComponent<Ball>();
+        b.SetColorAndPoint(col);
     }
 }
