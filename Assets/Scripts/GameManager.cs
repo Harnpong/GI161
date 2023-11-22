@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] 
     private GameObject[] ballPositions;
 
+    [SerializeField] private GameObject camera;
+
     public static GameManager instance;
 
     [SerializeField] private int score = 0;
