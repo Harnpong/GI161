@@ -5,7 +5,10 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - ballPrefab: {fileID: 3493493388766661912, guid: 385a0d380cda2b743b760eace243c41a, type: 3}
-  - camera: {instanceID: 0}
+  - cueBall: {fileID: 3493493388766661912, guid: 385a0d380cda2b743b760eace243c41a, type: 3}
+  - ballLine: {instanceID: 0}
+  - camera: {fileID: 5808167295735752277, guid: 268da71432cdce24f844ab933f07e0e7, type: 3}
+  - myBall: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
